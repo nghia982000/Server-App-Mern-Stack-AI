@@ -1,0 +1,96 @@
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "username":"admin1",
+    "password":"123456789",
+    "role":"user"
+}
+###
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "username":"admin1",
+    "password":"123456789"
+}
+
+
+###
+POSt http://localhost:5000/course/addCourse
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNjOGY3ODQ4ODEzODVkZGQ2ZDE2M2EiLCJpYXQiOjE2NDk0ODAxNzV9.-Olpysl3oFiH7gEmad55Hym1pZE-HO3bRG7OygJB5tY
+
+{
+    "title":"Reactjs cơ bản",
+    "description":"description",
+    "image":"google.com",
+    "url":"google.com"
+}
+###
+GET http://localhost:5000/course/listCourse
+
+
+###
+GET http://localhost:5000/course/getCourse
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNjOGY3ODQ4ODEzODVkZGQ2ZDE2M2EiLCJpYXQiOjE2NDk5MDcxMTB9.CzUv7J9TS09Y99koJq_--1f_uaAB1ml-56KbzWR1Lhg
+
+###
+PUT http://localhost:5000/course/updateCourse/62510c9959344c3f9b1fcb86
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNjOGY3ODQ4ODEzODVkZGQ2ZDE2M2EiLCJpYXQiOjE2NDk5MDcxMTB9.CzUv7J9TS09Y99koJq_--1f_uaAB1ml-56KbzWR1Lhg
+
+{
+    "title":"VueJS cơ bảntest",
+    "description":"description",
+    "image":"google.com",
+    "url":"google.com"
+}
+
+###
+DELETE  http://localhost:5000/course/deleteCourse/62510d6d59344c3f9b1fcb97
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjUwZjlmZDg5MmRiYTk2OGJlZjIzNjgiLCJpYXQiOjE2NDk0Nzg5ODJ9.fsmWP6vT4KVjmp8itp2oCLv9XcdIYvZyA4hWe0tg5xk
+# DELETE  http://localhost:5000/course/deleteCourse/6246a7d85d0c503f6594a55c
+
+###
+POST http://localhost:5000/course/searchCourse
+Content-Type: application/json
+
+{
+    "item":"javascript"
+}
+
+###
+POST http://localhost:5000/course/favoriteCourse
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjc1NGUxYTZkMWE0ZDE2NjU0ZjA4ZWYiLCJpYXQiOjE2NTE4NTQ4OTJ9.waK5KVp5W3eGmWeCWo1L318SAsJazMEhgcO2b1_56hU
+
+{
+    "id":"626a65903515c4ac1963dd15"
+}
+###
+POST http://localhost:5000/course/buyCourse
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNjOGY3ODQ4ODEzODVkZGQ2ZDE2M2EiLCJpYXQiOjE2NTE4NDgxNjB9.E5AJo354_nPkfAK6n9JbIUTaxUeob5i7dzToRAinhms
+
+{
+    "id":"626a65b23515c4ac1963dd1b"
+}
+
+###
+GET  http://localhost:5000/course/getBoughtCourse
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNjOGY3ODQ4ODEzODVkZGQ2ZDE2M2EiLCJpYXQiOjE2NTE4NDgxNjB9.E5AJo354_nPkfAK6n9JbIUTaxUeob5i7dzToRAinhms
+
+
+###
+GET  http://localhost:5000/course/getFavorite
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjc1NGUxYTZkMWE0ZDE2NjU0ZjA4ZWYiLCJpYXQiOjE2NTE4NTQ4OTJ9.waK5KVp5W3eGmWeCWo1L318SAsJazMEhgcO2b1_56hU
+
+
+###
+DELETE   http://localhost:5000/course/deleteFavorite/626a656e3515c4ac1963dd12
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjc1NGUxYTZkMWE0ZDE2NjU0ZjA4ZWYiLCJpYXQiOjE2NTE4NTQ4OTJ9.waK5KVp5W3eGmWeCWo1L318SAsJazMEhgcO2b1_56hU
+
